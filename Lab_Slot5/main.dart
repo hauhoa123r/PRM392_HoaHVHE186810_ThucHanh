@@ -5,7 +5,7 @@ class Vehicle {
   Vehicle(this.brand, this.year);
 
   void startEngine() {
-    print('Khởi động phương tiện');
+    print('Khởi động phương tiện...');
   }
 }
 
@@ -19,9 +19,9 @@ class Car extends Vehicle {
   @override
   void startEngine() {
     if (isElectric) {
-      print('Xe điện đang khởi động');
+      print('$brand ($year): Khởi động êm ái bằng động cơ điện...');
     } else {
-      print('Xe xăng đang khởi động');
+      print('$brand ($year): Brrr... Động cơ xăng đã khởi động!');
     }
   }
 }
