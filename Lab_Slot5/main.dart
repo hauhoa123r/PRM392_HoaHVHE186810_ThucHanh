@@ -5,7 +5,7 @@ class Vehicle {
   Vehicle(this.brand, this.year);
 
   void startEngine() {
-    print('Khởi động phương tiện...');
+    print('Khởi động phương tiện');
   }
 }
 
@@ -14,14 +14,14 @@ class Car extends Vehicle {
 
   Car(String brand, int year, this.isElectric) : super(brand, year);
 
-  Car.tesla(int year) : super('Tesla', year), isElectric = true;
+  Car.tesla(int year) : isElectric = true, super('Tesla', year);
 
   @override
   void startEngine() {
     if (isElectric) {
-      print('$brand ($year): Khởi động êm ái bằng động cơ điện...');
+      print('$brand ($year): Khởi động bằng động cơ điện');
     } else {
-      print('$brand ($year): Brrr... Động cơ xăng đã khởi động!');
+      print('$brand ($year): Động cơ xăng đã khởi động!');
     }
   }
 }
